@@ -62,3 +62,34 @@ The findings should be interpreted with several limitations in mind:
 - Cowrie records interactions with an emulated environment rather than a fully compromised operating system.
 
 The results therefore describe observed SSH activity and attacker-like behavior, rather than confirmed identities or successful compromises.
+
+### Command Pattern Analysis
+
+A keyword-based analysis was performed on the recorded
+Cowrie shell commands to identify recurring behaviors.
+
+| Category | Matching Commands |
+|:---------|------------------:|
+| System Reconnaissance | 15,760 |
+| Execution-related Activity | 4,979 |
+| SSH Key Modification | 126 |
+| Download-related Patterns | 14 |
+| SSH Configuration References | 0 |
+
+The most frequently observed activity involved operating
+system reconnaissance, particularly repeated execution of
+`uname -s -v -n -r -m`.
+
+Commands referencing SSH authorized keys were also
+recorded, suggesting possible attempts to establish
+persistent access within the simulated environment.
+
+These findings indicate patterns consistent with
+automated reconnaissance and post-authentication activity.
+
+The categories were determined using keyword matching.
+They may overlap, and a match does not necessarily
+confirm that the corresponding action succeeded.
+
+No evidence from these commands establishes that the
+underlying Oracle Cloud VPS was compromised.
