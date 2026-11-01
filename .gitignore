@@ -1,0 +1,23 @@
+# Private honeypot evidence
+evidence/
+full-logs/
+*.tar.gz
+cowrie*.json
+analysis-results.txt
+
+# Local backup
+README.backup.md
+
+# Private credentials and infrastructure files
+.env
+.env.*
+*.pem
+*.key
+id_rsa
+id_ed25519
+*.mmdb
+
+# Python
+__pycache__/
+*.pyc
+.venv/
